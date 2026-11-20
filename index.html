@@ -1,0 +1,1620 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatou Thiam — Portfolio UX/UI Designer</title>
+    <meta
+      name="description"
+      content="Portfolio professionnel de Fatou Thiam, Junior UX/UI Designer, Web Design & Front-End basée à Dakar, Sénégal."
+    />
+    <meta property="og:title" content="Fatou Thiam — Portfolio UX/UI Designer" />
+    <meta
+      property="og:description"
+      content="Portfolio professionnel de Fatou Thiam, Junior UX/UI Designer, Web Design & Front-End basée à Dakar, Sénégal."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_SN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#FAF6F6" />
+    <link rel="icon" type="image/png" href="/assets/aistudio/LPro1-1_9cd735f3.png" />
+
+    <!-- Typographies éditoriales : Manrope (titres) & DM Sans (corps de texte) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feuille de styles principale (compatible ouverture directe & VS Code Live Server) -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Lien d'évitement pour la navigation clavier et lecteurs d'écran -->
+    <a class="skip-link" href="#contenu-principal">Aller au contenu principal</a>
+
+    <!-- ===================================================================
+         A. HEADER / NAVIGATION (Contrat 3 zones strictes)
+         =================================================================== -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <!-- Zone 1 : Logo & nom Linguère Tech Solution sur une seule ligne -->
+        <a
+          href="#accueil"
+          class="brand-logo"
+          aria-label="Linguère Tech Solution — Retour à l'accueil"
+          title="Linguère Tech Solution"
+        >
+          <span class="logo-emblem-shell" aria-hidden="true">
+            <img
+              src="/assets/aistudio/LPro1-1_9cd735f3.png"
+              alt=""
+              class="brand-logo-img"
+              width="34"
+              height="34"
+            />
+          </span>
+          <span>LINGUÈRE TECH SOLUTION</span>
+        </a>
+
+        <!-- Zone 2 : Navigation principale desktop -->
+        <nav class="primary-nav" aria-label="Navigation principale">
+          <ul class="nav-list">
+            <li><a href="#accueil" class="nav-link is-active">Accueil</a></li>
+            <li><a href="#a-propos" class="nav-link">À propos</a></li>
+            <li><a href="#competences" class="nav-link">Compétences</a></li>
+            <li><a href="#projets" class="nav-link">Projets</a></li>
+            <li><a href="#certifications" class="nav-link">Certifications</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Zone 3 : Action principale + bouton menu mobile -->
+        <div class="header-actions">
+          <button
+            type="button"
+            class="btn btn-primary btn-sm"
+            data-cv-trigger
+            aria-label="Télécharger le CV de Fatou Thiam au format PDF"
+          >
+            <span>Télécharger mon CV</span>
+            <svg
+              class="icon-sm"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="mobile-menu-toggle"
+            id="mobile-menu-toggle"
+            aria-label="Ouvrir le menu de navigation"
+            aria-expanded="false"
+            aria-controls="mobile-nav-drawer"
+          >
+            <span class="hamburger-line" aria-hidden="true"></span>
+            <span class="hamburger-line" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu mobile coulissant -->
+      <div class="mobile-nav-drawer" id="mobile-nav-drawer" hidden>
+        <div class="container mobile-nav-content">
+          <nav aria-label="Navigation mobile">
+            <ul class="mobile-nav-list">
+              <li><a href="#accueil" class="mobile-nav-link">Accueil</a></li>
+              <li><a href="#a-propos" class="mobile-nav-link">À propos</a></li>
+              <li><a href="#competences" class="mobile-nav-link">Compétences</a></li>
+              <li><a href="#projets" class="mobile-nav-link">Projets</a></li>
+              <li><a href="#processus" class="mobile-nav-link">Processus UX</a></li>
+              <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+              <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="mobile-nav-footer">
+            <button type="button" class="btn btn-primary btn-full" data-cv-trigger>
+              <span>Télécharger mon CV</span>
+              <svg
+                class="icon-sm"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </button>
+            <p class="mobile-nav-meta">Dakar, Sénégal · Junior UX/UI Designer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barre fine de progression de lecture -->
+      <div class="scroll-progress-track" aria-hidden="true">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+      </div>
+    </header>
+
+    <main id="contenu-principal">
+      <!-- =================================================================
+           B. HERO SECTION
+           ================================================================= -->
+      <section class="hero-section" id="accueil" aria-labelledby="hero-title">
+        <div class="hero-ambient-mesh" aria-hidden="true">
+          <span class="hero-orb hero-orb-1"></span>
+          <span class="hero-orb hero-orb-2"></span>
+        </div>
+
+        <div class="container hero-container">
+          <div class="hero-grid">
+            <!-- Colonne gauche : hiérarchie éditoriale -->
+            <div class="hero-content">
+              <div class="hero-meta-line">
+                <span>Junior UX/UI Designer</span>
+                <span aria-hidden="true">·</span>
+                <span>Web Design &amp; Front-End</span>
+                <span aria-hidden="true">·</span>
+                <span>Dakar, Sénégal</span>
+              </div>
+
+              <h1 id="hero-title" class="hero-title">
+                Je transforme les idées en
+                <span class="text-gradient-accent">expériences digitales</span> simples, utiles et
+                intuitives.
+              </h1>
+
+              <p class="hero-lead">
+                À travers <strong>Linguère Tech Solution</strong>, je mets ma passion pour la
+                compréhension des besoins utilisateurs au service d'interfaces modernes, claires et
+                accessibles. Actuellement en formation UX/UI Design à Simplon Sénégal (2026) et
+                certifiée Google UX Design, j'allie méthodologie de recherche et sensibilité front-end.
+              </p>
+
+              <p class="hero-availability">
+                <span class="availability-accent">Disponibilité</span>
+                <span aria-hidden="true">·</span>
+                <span>Ouverte aux opportunités UX/UI et missions freelance</span>
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#projets" class="btn btn-primary btn-lg">
+                  <span>Découvrir mes projets</span>
+                  <svg
+                    class="icon-sm"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary btn-lg">Me contacter</a>
+              </div>
+            </div>
+
+            <!-- Colonne droite : Portrait officiel de Fatou Thiam -->
+            <div class="hero-media">
+              <figure class="portrait-frame">
+                <div class="media-box portrait-box" data-tilt-card>
+                  <img
+                    src="/assets/aistudio/WhatsApp_Image_2026-11-19_at_18.42.19_79592d86.jpeg"
+                    alt="Portrait professionnel de Fatou Thiam, fondatrice de Linguère Tech Solution et Junior UX/UI Designer à Dakar"
+                    class="portrait-img"
+                    loading="eager"
+                    referrerpolicy="no-referrer"
+                    data-fallback-title="Fatou Thiam"
+                    data-fallback-sub="Linguère Tech Solution · Dakar"
+                  />
+                  <div class="portrait-glass-note" aria-hidden="true">
+                    <span class="portrait-glass-title">Linguère Tech Solution</span>
+                    <span class="portrait-glass-sub">UX/UI Design · Dakar</span>
+                  </div>
+                </div>
+                <figcaption class="portrait-caption">
+                  <span>Linguère Tech Solution</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Dakar, Sénégal</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Bandeau éditorial pleine largeur sous le Hero -->
+          <div class="hero-facts-strip" aria-label="Repères du profil">
+            <div class="fact-item">
+              <span class="fact-label">Identité professionnelle</span>
+              <span class="fact-value">Linguère Tech Solution</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-label">Formation actuelle</span>
+              <span class="fact-value">Simplon Sénégal — UX/UI Design (2026)</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-label">Certification</span>
+              <span class="fact-value">Google UX Design Professional Certificate</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-label">Double culture</span>
+              <span class="fact-value">Design centré utilisateur &amp; Intégration Web</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ruban éditorial discret des expertises -->
+      <div class="editorial-ribbon" aria-hidden="true">
+        <div class="editorial-ribbon-track">
+          <div class="editorial-ribbon-group">
+            <span>UX Research</span>
+            <span class="ribbon-sep">·</span>
+            <span>Architecture de l'information</span>
+            <span class="ribbon-sep">·</span>
+            <span>Wireframing</span>
+            <span class="ribbon-sep">·</span>
+            <span>UI Design</span>
+            <span class="ribbon-sep">·</span>
+            <span>Prototypage Figma</span>
+            <span class="ribbon-sep">·</span>
+            <span>Design Systems</span>
+            <span class="ribbon-sep">·</span>
+            <span>Tests Utilisateurs</span>
+            <span class="ribbon-sep">·</span>
+            <span>Accessibilité</span>
+            <span class="ribbon-sep">·</span>
+            <span>Intégration Front-End</span>
+            <span class="ribbon-sep">·</span>
+          </div>
+          <div class="editorial-ribbon-group">
+            <span>UX Research</span>
+            <span class="ribbon-sep">·</span>
+            <span>Architecture de l'information</span>
+            <span class="ribbon-sep">·</span>
+            <span>Wireframing</span>
+            <span class="ribbon-sep">·</span>
+            <span>UI Design</span>
+            <span class="ribbon-sep">·</span>
+            <span>Prototypage Figma</span>
+            <span class="ribbon-sep">·</span>
+            <span>Design Systems</span>
+            <span class="ribbon-sep">·</span>
+            <span>Tests Utilisateurs</span>
+            <span class="ribbon-sep">·</span>
+            <span>Accessibilité</span>
+            <span class="ribbon-sep">·</span>
+            <span>Intégration Front-End</span>
+            <span class="ribbon-sep">·</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================================
+           C. À PROPOS
+           ================================================================= -->
+      <section class="section section-bordered" id="a-propos" aria-labelledby="about-title">
+        <div class="container">
+          <div class="about-grid reveal">
+            <!-- Colonne gauche : repères clés et titre -->
+            <div class="about-intro">
+              <p class="section-kicker">À propos</p>
+              <h2 id="about-title" class="section-title">
+                Une approche rigoureuse, ancrée dans l'écoute et la clarté.
+              </h2>
+
+              <dl class="about-highlights">
+                <div class="highlight-row">
+                  <dt>Identité professionnelle</dt>
+                  <dd>Linguère Tech Solution</dd>
+                </div>
+                <div class="highlight-row">
+                  <dt>Spécialisation</dt>
+                  <dd>UX/UI Design — Simplon Sénégal (2026)</dd>
+                </div>
+                <div class="highlight-row">
+                  <dt>Formation académique</dt>
+                  <dd>Licence 3 Génie logiciel — ISI, Keur Massar (2022–2023)</dd>
+                </div>
+                <div class="highlight-row">
+                  <dt>Réseaux &amp; systèmes</dt>
+                  <dd>Licence Réseaux informatiques — AMDI, Dakar (2021–2022)</dd>
+                </div>
+                <div class="highlight-row">
+                  <dt>Langues</dt>
+                  <dd>Français (courant) · Wolof (maternelle) · Anglais (technique)</dd>
+                </div>
+              </dl>
+
+              <div class="about-cv-actions">
+                <button type="button" class="btn btn-primary" data-cv-preview>
+                  <span>Consulter mon CV (PDF)</span>
+                </button>
+                <button type="button" class="btn btn-secondary" data-cv-trigger>
+                  <span>Télécharger le PDF</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Colonne droite : récit éditorial, identité Linguère Tech Solution, vidéo & stages -->
+            <div class="about-narrative">
+              <p class="about-lead-paragraph">
+                Issue d'un parcours en informatique et génie logiciel, mon intérêt pour les produits
+                numériques s'est progressivement recentré sur ce qui fait leur véritable utilité : les
+                personnes qui les utilisent au quotidien.
+              </p>
+              <p>
+                C'est cette conviction qui m'a conduite à obtenir le
+                <strong>Google UX Design Professional Certificate</strong>, puis à intégrer la
+                formation <strong>UX/UI Design à Simplon Sénégal (2026)</strong>. Cette trajectoire
+                me permet d'aborder chaque projet avec une méthode structurée — de l'analyse des
+                besoins utilisateurs jusqu'à la conception d'interfaces cohérentes et prototypées.
+              </p>
+              <p>
+                J'accorde une attention particulière à la <strong>recherche utilisateur</strong>, à
+                l'<strong>accessibilité</strong> et à la lisibilité des parcours. Comprendre un
+                problème réel avant de dessiner le moindre écran est pour moi la condition essentielle
+                d'un design pertinent.
+              </p>
+              <p>
+                Grâce à mes bases techniques en développement web (HTML5, CSS3, JavaScript, WordPress,
+                PHP), je conçois des maquettes réalistes, respectueuses des contraintes d'intégration et
+                facilitant le dialogue entre design et développement.
+              </p>
+
+              <!-- Carte éditoriale : Identité Linguère Tech Solution & Vidéo de parcours -->
+              <div class="about-video-feature">
+                <div class="about-video-frame">
+                  <video
+                    class="about-video-player"
+                    controls
+                    playsinline
+                    preload="metadata"
+                    aria-label="Vidéo de présentation du parcours UX/UI et de la certification Google UX Design de Fatou Thiam"
+                  >
+                    <source
+                      src="/assets/aistudio/WhatsApp_Video_2026-11-19_at_18.49.59_97253b0f.mp4#t=0.8"
+                      type="video/mp4"
+                    />
+                    Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+                  </video>
+                </div>
+
+                <div class="about-video-copy">
+                  <div class="brand-identity-lockup">
+                    <span class="logo-emblem-shell logo-emblem-lg">
+                      <img
+                        src="/assets/aistudio/LPro1-1_9cd735f3.png"
+                        alt="Logo Linguère Tech Solution"
+                        class="brand-identity-logo"
+                        width="44"
+                        height="44"
+                      />
+                    </span>
+                    <div>
+                      <span class="brand-identity-kicker">Identité professionnelle</span>
+                      <h3 class="brand-identity-name">Linguère Tech Solution</h3>
+                    </div>
+                  </div>
+
+                  <p class="about-video-text">
+                    <strong>Linguère Tech Solution</strong> incarne mon univers professionnel : une
+                    vision exigeante et accessible du numérique, portée par l'apprentissage continu,
+                    la rigueur UX et la qualité visuelle.
+                  </p>
+                  <p class="about-video-text">
+                    Cette courte vidéo retrace mon engagement quotidien dans la conception digitale
+                    et l'aboutissement de ma certification <strong>Google UX Design</strong>.
+                  </p>
+                  <p class="about-video-meta">
+                    <span>Aperçu vidéo</span>
+                    <span aria-hidden="true">·</span>
+                    <span>Travail en studio &amp; Certification Google UX</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Expériences de stage issues du CV -->
+              <div class="experience-mini-block">
+                <h3 class="experience-mini-heading">Premières expériences (Stages · 2023)</h3>
+                <ul class="experience-mini-list">
+                  <li class="experience-mini-item">
+                    <div class="experience-mini-meta">
+                      <span>UI/UX Designer</span>
+                      <span aria-hidden="true">·</span>
+                      <span>Snsotware, Cité Keur Gorgui · 2023</span>
+                    </div>
+                    <p class="experience-mini-title">Maquette Cathy Travel</p>
+                    <p class="experience-mini-desc">
+                      Conception d'une maquette Figma avec charte graphique cohérente, optimisation de
+                      l'expérience utilisateur et validation responsive (ordinateur, tablette, mobile).
+                    </p>
+                  </li>
+                  <li class="experience-mini-item">
+                    <div class="experience-mini-meta">
+                      <span>Développeuse WordPress</span>
+                      <span aria-hidden="true">·</span>
+                      <span>Lombatech (startup), Stage en ligne · 2023</span>
+                    </div>
+                    <p class="experience-mini-title">Site vitrine Lombatech</p>
+                    <p class="experience-mini-desc">
+                      Réalisation des pages de services, portfolio et formulaire de devis avec design
+                      moderne et adaptation mobile complète.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           D. COMPÉTENCES & OUTILS
+           ================================================================= -->
+      <section class="section section-bordered" id="competences" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-kicker">Compétences</p>
+            <h2 id="skills-title" class="section-title">
+              De la compréhension utilisateur à l'interface fonctionnelle.
+            </h2>
+            <p class="section-subtitle">
+              Un socle structuré autour de trois domaines complémentaires et d'outils standards du
+              design produit.
+            </p>
+          </div>
+
+          <!-- Trois catégories éditoriales -->
+          <div class="skills-grid reveal">
+            <!-- 01. UX Design -->
+            <article class="skill-column">
+              <div class="skill-column-head">
+                <span class="editorial-index">01</span>
+                <h3 class="skill-category-title">UX Design</h3>
+              </div>
+              <p class="skill-category-desc">
+                Explorer les usages réels, formuler les bons problèmes et structurer des parcours
+                fluides.
+              </p>
+              <ul class="skill-list">
+                <li>Recherche utilisateur (UX Research)</li>
+                <li>Analyse des besoins utilisateurs</li>
+                <li>Personas et empathy maps</li>
+                <li>Parcours utilisateur (User Journey)</li>
+                <li>Architecture de l'information</li>
+                <li>Tests utilisateurs</li>
+              </ul>
+            </article>
+
+            <!-- 02. UI Design -->
+            <article class="skill-column">
+              <div class="skill-column-head">
+                <span class="editorial-index">02</span>
+                <h3 class="skill-category-title">UI Design</h3>
+              </div>
+              <p class="skill-category-desc">
+                Traduire les solutions en interfaces lisibles, hiérarchisées, accessibles et
+                interactives.
+              </p>
+              <ul class="skill-list">
+                <li>Wireframes et maquettes fonctionnelles</li>
+                <li>UI Design et direction visuelle</li>
+                <li>Prototypage interactif</li>
+                <li>Création de design systems</li>
+                <li>Design responsive (Mobile first &amp; Web)</li>
+                <li>Accessibilité numérique</li>
+              </ul>
+            </article>
+
+            <!-- 03. Développement -->
+            <article class="skill-column">
+              <div class="skill-column-head">
+                <span class="editorial-index">03</span>
+                <h3 class="skill-category-title">Développement</h3>
+              </div>
+              <p class="skill-category-desc">
+                Intégrer des interfaces propres et collaborer efficacement avec les équipes techniques.
+              </p>
+              <ul class="skill-list">
+                <li>HTML5 sémantique &amp; CSS3 moderne</li>
+                <li>JavaScript, Bootstrap &amp; PHP</li>
+                <li>CMS : WordPress, PrestaShop &amp; Wix</li>
+                <li>Bases de données : MySQL &amp; SQL Server</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Aperçu visuel UI & Design Systems (Mockup vitrine haute fidélité) -->
+          <figure class="design-showcase-card reveal">
+            <div class="design-showcase-media">
+              <img
+                src="./assets/images/mockup-design-system.jpg"
+                alt="Mockup vitrine présentant des écrans mobiles haute fidélité, des grilles responsive et des composants de design system conçus pour Figma"
+                class="design-showcase-img"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                data-fallback-title="Design System & Maquettes UI"
+                data-fallback-sub="assets/images/mockup-design-system.jpg"
+              />
+            </div>
+            <figcaption class="design-showcase-caption">
+              <span class="design-showcase-label">Aperçu UI &amp; Design Systems</span>
+              <span aria-hidden="true">·</span>
+              <span>Maquettes haute fidélité, composants réutilisables et prototypes interactifs sur Figma</span>
+            </figcaption>
+          </figure>
+
+          <!-- Boîte à outils visuelle (grille architecturale épurée) -->
+          <div class="tools-block reveal" aria-labelledby="tools-heading">
+            <div class="tools-header">
+              <h3 id="tools-heading" class="tools-title">Outils maîtrisés</h3>
+              <p class="tools-caption">Environnement de conception, collaboration et organisation</p>
+            </div>
+
+            <div class="tools-grid">
+              <div class="tool-tile">
+                <div class="tool-mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M9 3h3v6H9a3 3 0 1 1 0-6Z" />
+                    <path d="M12 3h3a3 3 0 1 1 0 6h-3V3Z" />
+                    <path d="M12 9h3a3 3 0 1 1 0 6h-3V9Z" />
+                    <path d="M9 9h3v6H9a3 3 0 1 1 0-6Z" />
+                    <path d="M9 15h3v3a3 3 0 1 1-3-3Z" />
+                  </svg>
+                </div>
+                <div class="tool-info">
+                  <span class="tool-name">Figma</span>
+                  <span class="tool-role">UI, prototypes &amp; design systems</span>
+                </div>
+              </div>
+
+              <div class="tool-tile">
+                <div class="tool-mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="3" y="3" width="8" height="8" rx="1.5" />
+                    <rect x="13" y="13" width="8" height="8" rx="1.5" />
+                    <path d="M11 7h4a2 2 0 0 1 2 2v4" />
+                  </svg>
+                </div>
+                <div class="tool-info">
+                  <span class="tool-name">FigJam</span>
+                  <span class="tool-role">Ateliers, flows &amp; idéation</span>
+                </div>
+              </div>
+
+              <div class="tool-tile">
+                <div class="tool-mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M4 19V5l4 5 4-5 4 5 4-5v14" />
+                  </svg>
+                </div>
+                <div class="tool-info">
+                  <span class="tool-name">Miro</span>
+                  <span class="tool-role">Personas, empathy maps &amp; tri</span>
+                </div>
+              </div>
+
+              <div class="tool-tile">
+                <div class="tool-mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <path d="M8 15V9h2.5a2 2 0 0 1 0 4H8" />
+                    <path d="M16 11.5c0-.8-.7-1.3-1.5-1.3s-1.5.5-1.5 1.2c0 1.6 3 1 3 2.5 0 .8-.7 1.3-1.6 1.3s-1.6-.5-1.6-1.3" />
+                  </svg>
+                </div>
+                <div class="tool-info">
+                  <span class="tool-name">Adobe Photoshop</span>
+                  <span class="tool-role">Retouche &amp; visuels</span>
+                </div>
+              </div>
+
+              <div class="tool-tile">
+                <div class="tool-mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M12 3 4 20h3.2l1.6-3.8h6.4L16.8 20H20L12 3Z" />
+                    <line x1="9.8" y1="13.5" x2="14.2" y2="13.5" />
+                  </svg>
+                </div>
+                <div class="tool-info">
+                  <span class="tool-name">Illustrator</span>
+                  <span class="tool-role">Icônes &amp; graphisme vectoriel</span>
+                </div>
+              </div>
+
+              <div class="tool-tile">
+                <div class="tool-mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <circle cx="12" cy="12" r="8.5" />
+                    <path d="M15.2 9.5a4 4 0 1 0 0 5" />
+                  </svg>
+                </div>
+                <div class="tool-info">
+                  <span class="tool-name">Canva</span>
+                  <span class="tool-role">Supports visuels &amp; présentations</span>
+                </div>
+              </div>
+
+              <div class="tool-tile">
+                <div class="tool-mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <rect x="6.5" y="7.5" width="4" height="9" rx="0.8" />
+                    <rect x="13.5" y="7.5" width="4" height="5.5" rx="0.8" />
+                  </svg>
+                </div>
+                <div class="tool-info">
+                  <span class="tool-name">Trello</span>
+                  <span class="tool-role">Suivi &amp; gestion de projet</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           E. MES PROJETS
+           ================================================================= -->
+      <section class="section section-bordered" id="projets" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="projects-header reveal">
+            <div class="section-header section-header-compact">
+              <p class="section-kicker">Projets sélectionnés</p>
+              <h2 id="projects-title" class="section-title">
+                Des solutions pensées à partir de besoins concrets.
+              </h2>
+            </div>
+
+            <!-- Filtres interactifs par discipline -->
+            <div class="filter-bar" role="group" aria-label="Filtrer les projets par discipline">
+              <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">
+                Tous les projets
+              </button>
+              <button type="button" class="filter-btn" data-filter="mobile" aria-pressed="false">
+                Mobile &amp; App
+              </button>
+              <button type="button" class="filter-btn" data-filter="civic" aria-pressed="false">
+                Service public &amp; Impact
+              </button>
+            </div>
+          </div>
+
+          <!-- Grille éditoriale asymétrique (projet 1 mis en avant, projets 2 et 3 en duo) -->
+          <div class="projects-grid" id="projects-grid">
+            <!-- Projet 1 : Sénégal Vide Dressing -->
+            <article class="project-card project-card-featured reveal" data-categories="all mobile">
+              <div class="project-media" data-project-media-open="senegal-vide-dressing">
+                <img
+                  src="./assets/images/projet-senegal-vide-dressing.jpg"
+                  alt="Aperçu du projet Sénégal Vide Dressing — marketplace mobile de tenues de cérémonie"
+                  class="project-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  data-fallback-title="Sénégal Vide Dressing"
+                  data-fallback-sub="assets/images/projet-senegal-vide-dressing.jpg"
+                />
+                <span class="project-media-cta" aria-hidden="true">Explorer l'étude de cas ↗</span>
+              </div>
+
+              <div class="project-body">
+                <div class="project-meta">
+                  <span>01</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Mobile first, puis Web</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Marketplace Mode</span>
+                </div>
+
+                <h3 class="project-title">Sénégal Vide Dressing</h3>
+
+                <p class="project-summary">
+                  Marketplace dédiée à l'achat et à la vente de vêtements et accessoires de cérémonie de
+                  seconde main pour les femmes au Sénégal, facilitant l'accès à des tenues élégantes à
+                  prix accessibles.
+                </p>
+
+                <dl class="project-quick-details">
+                  <div>
+                    <dt>Rôle</dt>
+                    <dd>UX Research, UX/UI Design et prototypage</dd>
+                  </div>
+                  <div>
+                    <dt>Outils</dt>
+                    <dd>Figma · FigJam · Miro</dd>
+                  </div>
+                </dl>
+
+                <div class="project-actions">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-project-open="senegal-vide-dressing"
+                  >
+                    <span>Voir le projet</span>
+                    <svg
+                      class="icon-sm"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7" />
+                      <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Projet 2 : Moytu Net (Pel Challenge) -->
+            <article class="project-card reveal" data-categories="all mobile civic">
+              <div class="project-media" data-project-media-open="moytu-net">
+                <img
+                  src="./assets/images/projet-moytu-net.jpg"
+                  alt="Aperçu du projet Moytu Net — application éducative de sécurité numérique pour enfants"
+                  class="project-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  data-fallback-title="Moytu Net (Pel Challenge)"
+                  data-fallback-sub="assets/images/projet-moytu-net.jpg"
+                />
+                <span class="project-media-cta" aria-hidden="true">Explorer l'étude de cas ↗</span>
+              </div>
+
+              <div class="project-body">
+                <div class="project-meta">
+                  <span>02</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Application éducative</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Enfants 7–12 ans &amp; Parents</span>
+                </div>
+
+                <h3 class="project-title">Moytu Net (Pel Challenge)</h3>
+
+                <p class="project-summary">
+                  Application éducative destinée aux enfants de 7 à 12 ans pour apprendre à se protéger
+                  sur Internet grâce à des activités ludiques, tout en accompagnant les parents.
+                </p>
+
+                <dl class="project-quick-details">
+                  <div>
+                    <dt>Rôle</dt>
+                    <dd>UX Researcher, UI Designer, Graphiste, prototype &amp; tests</dd>
+                  </div>
+                  <div>
+                    <dt>Outils</dt>
+                    <dd>Figma · Illustrator · Photoshop · FigJam</dd>
+                  </div>
+                </dl>
+
+                <div class="project-actions">
+                  <button type="button" class="btn btn-primary" data-project-open="moytu-net">
+                    <span>Voir le projet</span>
+                    <svg
+                      class="icon-sm"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7" />
+                      <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Projet 3 : Mairie Connect -->
+            <article class="project-card reveal" data-categories="all civic">
+              <div class="project-media" data-project-media-open="mairie-connect">
+                <img
+                  src="./assets/images/projet-mairie-connect.jpg"
+                  alt="Aperçu du projet Mairie Connect — solution digitale de services municipaux"
+                  class="project-img"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  data-fallback-title="Mairie Connect"
+                  data-fallback-sub="assets/images/projet-mairie-connect.jpg"
+                />
+                <span class="project-media-cta" aria-hidden="true">Explorer l'étude de cas ↗</span>
+              </div>
+
+              <div class="project-body">
+                <div class="project-meta">
+                  <span>03</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Plateforme citoyenne</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Services municipaux</span>
+                </div>
+
+                <h3 class="project-title">Mairie Connect</h3>
+
+                <p class="project-summary">
+                  Solution digitale conçue pour faciliter les interactions entre les citoyens et les
+                  services municipaux, améliorer l'accès à l'information et simplifier les démarches.
+                </p>
+
+                <dl class="project-quick-details">
+                  <div>
+                    <dt>Rôle</dt>
+                    <dd>UX Researcher, responsable du prototype et des tests</dd>
+                  </div>
+                  <div>
+                    <dt>Outils</dt>
+                    <dd>Figma · Miro · FigJam · Trello</dd>
+                  </div>
+                </dl>
+
+                <div class="project-actions">
+                  <button type="button" class="btn btn-primary" data-project-open="mairie-connect">
+                    <span>Voir le projet</span>
+                    <svg
+                      class="icon-sm"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7" />
+                      <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           G. MON PROCESSUS DE CONCEPTION (5 ÉTAPES UX INTERACTIVES)
+           ================================================================= -->
+      <section class="section section-bordered" id="processus" aria-labelledby="process-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-kicker">Méthodologie</p>
+            <h2 id="process-title" class="section-title">Mon processus de conception UX/UI</h2>
+            <p class="section-subtitle">
+              Une démarche itérative centrée sur l'utilisateur en cinq étapes clés, du terrain jusqu'à
+              la validation.
+            </p>
+          </div>
+
+          <div class="process-shell reveal">
+            <!-- Piste de progression connectée des 5 étapes -->
+            <div class="process-track" aria-hidden="true">
+              <div class="process-track-fill" id="process-track-fill"></div>
+            </div>
+
+            <!-- Barre de sélection des 5 étapes -->
+            <div class="process-steps-nav" role="tablist" aria-label="Étapes du processus UX">
+              <button
+                type="button"
+                class="process-step-btn is-active"
+                role="tab"
+                aria-selected="true"
+                aria-controls="process-panel"
+                id="tab-empathize"
+                data-step-id="empathize"
+              >
+                <span class="step-num">01</span>
+                <span class="step-name">Empathize</span>
+                <span class="step-short">Comprendre les utilisateurs</span>
+              </button>
+
+              <button
+                type="button"
+                class="process-step-btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="process-panel"
+                id="tab-define"
+                data-step-id="define"
+              >
+                <span class="step-num">02</span>
+                <span class="step-name">Define</span>
+                <span class="step-short">Formuler le problème</span>
+              </button>
+
+              <button
+                type="button"
+                class="process-step-btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="process-panel"
+                id="tab-ideate"
+                data-step-id="ideate"
+              >
+                <span class="step-num">03</span>
+                <span class="step-name">Ideate</span>
+                <span class="step-short">Explorer les solutions</span>
+              </button>
+
+              <button
+                type="button"
+                class="process-step-btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="process-panel"
+                id="tab-design"
+                data-step-id="design"
+              >
+                <span class="step-num">04</span>
+                <span class="step-name">Design</span>
+                <span class="step-short">Concevoir &amp; prototyper</span>
+              </button>
+
+              <button
+                type="button"
+                class="process-step-btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="process-panel"
+                id="tab-test"
+                data-step-id="test"
+              >
+                <span class="step-num">05</span>
+                <span class="step-name">Test</span>
+                <span class="step-short">Évaluer et améliorer</span>
+              </button>
+            </div>
+
+            <!-- Panneau pédagogique détaillé mis à jour dynamiquement -->
+            <div
+              class="process-detail-panel"
+              id="process-panel"
+              role="tabpanel"
+              aria-labelledby="tab-empathize"
+            >
+              <div class="process-detail-main">
+                <p class="process-detail-kicker" id="process-detail-kicker">Étape 01 sur 05</p>
+                <h3 class="process-detail-title" id="process-detail-title">
+                  Empathize — Comprendre les utilisateurs
+                </h3>
+                <p class="process-detail-desc" id="process-detail-desc">
+                  Observer les habitudes, écouter les frustrations et comprendre le contexte réel
+                  d'utilisation avant de formuler la moindre hypothèse d'interface.
+                </p>
+              </div>
+              <div class="process-detail-deliverables">
+                <h4 class="process-deliverables-title">Méthodes &amp; livrables associés</h4>
+                <ul class="process-deliverables-list" id="process-deliverables-list">
+                  <li>Entretiens utilisateurs et observation de terrain</li>
+                  <li>Analyse des besoins et points de friction</li>
+                  <li>Cartes d'empathie (Empathy Maps)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           F. CERTIFICATIONS ET FORMATIONS
+           ================================================================= -->
+      <section class="section section-bordered" id="certifications" aria-labelledby="cert-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="section-kicker">Certifications &amp; formations</p>
+            <h2 id="cert-title" class="section-title">Un apprentissage continu et certifié.</h2>
+            <p class="section-subtitle">
+              Chaque carte dispose d'un emplacement dédié pour afficher le visuel officiel du
+              certificat et son lien de vérification.
+            </p>
+          </div>
+
+          <div class="certifications-grid reveal">
+            <!-- 1. Google UX Design -->
+            <article class="cert-card">
+              <div class="cert-card-top">
+                <div class="cert-meta">
+                  <span>Nov. 2026</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Google</span>
+                </div>
+                <h3 class="cert-title">Google UX Design Professional Certificate</h3>
+                <p class="cert-desc">
+                  Fondamentaux du design centré utilisateur, recherche UX, wireframing, prototypage
+                  interactif sur Figma et tests d'utilisabilité.
+                </p>
+              </div>
+              <div class="cert-card-actions">
+                <button
+                  type="button"
+                  class="text-action-btn"
+                  data-cert-open="google-ux"
+                >
+                  Aperçu du certificat
+                </button>
+                <button
+                  type="button"
+                  class="text-action-btn text-action-muted"
+                  data-cert-verify="google-ux"
+                >
+                  Lien de vérification
+                </button>
+              </div>
+            </article>
+
+            <!-- 2. Simplon Sénégal UX/UI 2026 -->
+            <article class="cert-card">
+              <div class="cert-card-top">
+                <div class="cert-meta">
+                  <span>2026 · En cours</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Simplon Sénégal</span>
+                </div>
+                <h3 class="cert-title">Formation UX/UI Design — Simplon Sénégal</h3>
+                <p class="cert-desc">
+                  Apprentissage intensif par projets réels : méthodologie UX complète, design systems,
+                  prototypage avancé, accessibilité et conduite de tests utilisateurs.
+                </p>
+              </div>
+              <div class="cert-card-actions">
+                <button
+                  type="button"
+                  class="text-action-btn"
+                  data-cert-open="simplon-uxui"
+                >
+                  Voir le détail
+                </button>
+                <button
+                  type="button"
+                  class="text-action-btn text-action-muted"
+                  data-cert-verify="simplon-uxui"
+                >
+                  Attestation / Lien
+                </button>
+              </div>
+            </article>
+
+            <!-- 3. Simplon Compétences Numériques -->
+            <article class="cert-card">
+              <div class="cert-card-top">
+                <div class="cert-meta">
+                  <span>Avr. 2024</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Simplon Sénégal</span>
+                </div>
+                <h3 class="cert-title">Formation Compétences Numériques — Simplon</h3>
+                <p class="cert-desc">
+                  Consolidation des pratiques numériques collaboratives, culture web, gestion de projet
+                  digital et outils de production.
+                </p>
+              </div>
+              <div class="cert-card-actions">
+                <button
+                  type="button"
+                  class="text-action-btn"
+                  data-cert-open="simplon-numerique"
+                >
+                  Aperçu du certificat
+                </button>
+                <button
+                  type="button"
+                  class="text-action-btn text-action-muted"
+                  data-cert-verify="simplon-numerique"
+                >
+                  Lien de vérification
+                </button>
+              </div>
+            </article>
+
+            <!-- 4. Entrepreneuriat Degg Naa La — Yunus -->
+            <article class="cert-card">
+              <div class="cert-card-top">
+                <div class="cert-meta">
+                  <span>Avr. 2024</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Yunus</span>
+                </div>
+                <h3 class="cert-title">Entrepreneuriat « Degg Naa La » — Yunus</h3>
+                <p class="cert-desc">
+                  Sensibilisation à l'entrepreneuriat social, structuration de projet et approche
+                  orientée impact et résolution de problèmes.
+                </p>
+              </div>
+              <div class="cert-card-actions">
+                <button
+                  type="button"
+                  class="text-action-btn"
+                  data-cert-open="yunus-entrepreneuriat"
+                >
+                  Aperçu du certificat
+                </button>
+                <button
+                  type="button"
+                  class="text-action-btn text-action-muted"
+                  data-cert-verify="yunus-entrepreneuriat"
+                >
+                  Lien de vérification
+                </button>
+              </div>
+            </article>
+
+            <!-- 5. OpenClassrooms HTML5 & CSS3 -->
+            <article class="cert-card">
+              <div class="cert-card-top">
+                <div class="cert-meta">
+                  <span>Mai 2020</span>
+                  <span aria-hidden="true">·</span>
+                  <span>OpenClassrooms</span>
+                </div>
+                <h3 class="cert-title">HTML5 et CSS3 — OpenClassrooms</h3>
+                <p class="cert-desc">
+                  Structuration sémantique HTML5, mise en page responsive Flexbox et CSS Grid,
+                  bonnes pratiques d'intégration web.
+                </p>
+              </div>
+              <div class="cert-card-actions">
+                <button
+                  type="button"
+                  class="text-action-btn"
+                  data-cert-open="openclassrooms-html-css"
+                >
+                  Aperçu du certificat
+                </button>
+                <button
+                  type="button"
+                  class="text-action-btn text-action-muted"
+                  data-cert-verify="openclassrooms-html-css"
+                >
+                  Lien de vérification
+                </button>
+              </div>
+            </article>
+
+            <!-- 6. Parcours Académique Informatique & Génie Logiciel -->
+            <article class="cert-card">
+              <div class="cert-card-top">
+                <div class="cert-meta">
+                  <span>2019 – 2023</span>
+                  <span aria-hidden="true">·</span>
+                  <span>ISI Keur Massar · AMDI Dakar</span>
+                </div>
+                <h3 class="cert-title">Licence 3 Génie Logiciel &amp; Licence Réseaux</h3>
+                <p class="cert-desc">
+                  Licence 3 en Génie logiciel à l'ISI Keur Massar (2022–2023), Licence en Réseaux
+                  informatiques à l'AMDI Dakar (2021–2022) et Baccalauréat série S2 à l'Institut Privé
+                  Massamba (2019–2020).
+                </p>
+              </div>
+              <div class="cert-card-actions">
+                <button
+                  type="button"
+                  class="text-action-btn"
+                  data-cert-open="genie-logiciel"
+                >
+                  Voir le détail académique
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           H. CONTACT
+           ================================================================= -->
+      <section class="section section-bordered" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact-grid reveal">
+            <!-- Colonne gauche : Identité Linguère Tech Solution & Coordonnées -->
+            <div class="contact-info">
+              <div class="contact-brand-lockup">
+                <span class="contact-logo-badge" aria-hidden="true">
+                  <img
+                    src="/assets/aistudio/LPro1-1_9cd735f3.png"
+                    alt=""
+                    width="34"
+                    height="34"
+                  />
+                </span>
+                <span class="contact-brand-label">Linguère Tech Solution</span>
+              </div>
+
+              <p class="section-kicker">Contact</p>
+              <h2 id="contact-title" class="section-title">
+                Échangeons autour de vos projets digitaux.
+              </h2>
+              <p class="contact-lead">
+                Je suis ouverte aux opportunités en UX/UI Design, stages, collaborations produit et
+                missions freelance à Dakar ou à distance.
+              </p>
+
+              <!-- Coordonnées issues du CV et modifiables dans PORTFOLIO_CONFIG (script.js) -->
+              <ul class="contact-channels" aria-label="Canaux de contact directs">
+                <li class="channel-item">
+                  <span class="channel-label">Adresse e-mail</span>
+                  <div class="channel-value-row">
+                    <a
+                      href="mailto:ft95thiam@gmail.com"
+                      class="channel-link"
+                      id="contact-email-link"
+                      data-channel="email"
+                    >
+                      ft95thiam@gmail.com
+                    </a>
+                  </div>
+                </li>
+
+                <li class="channel-item">
+                  <span class="channel-label">LinkedIn</span>
+                  <div class="channel-value-row">
+                    <a
+                      href="https://www.linkedin.com/in/fatou-thiam"
+                      class="channel-link"
+                      id="contact-linkedin-link"
+                      data-channel="linkedin"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      linkedin.com/in/fatou-thiam
+                    </a>
+                  </div>
+                </li>
+
+                <li class="channel-item">
+                  <span class="channel-label">WhatsApp &amp; Téléphone</span>
+                  <div class="channel-value-row">
+                    <a
+                      href="https://wa.me/221776092143"
+                      class="channel-link"
+                      id="contact-whatsapp-link"
+                      data-channel="whatsapp"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      +221 77 609 21 43 · Discuter sur WhatsApp
+                    </a>
+                  </div>
+                </li>
+
+                <li class="channel-item">
+                  <span class="channel-label">Localisation</span>
+                  <span class="channel-static">Dakar, Sénégal</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Colonne droite : Formulaire de contact accessible -->
+            <div class="contact-form-wrap">
+              <form class="contact-form" id="contact-form" novalidate>
+                <div class="form-field">
+                  <label for="contact-name" class="form-label">Nom complet</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Ex. Aminata Diallo"
+                    autocomplete="name"
+                    required
+                    aria-describedby="error-name"
+                  />
+                  <span class="form-error" id="error-name" aria-live="polite"></span>
+                </div>
+
+                <div class="form-field">
+                  <label for="contact-email" class="form-label">Adresse e-mail</label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="nom@entreprise.com"
+                    autocomplete="email"
+                    required
+                    aria-describedby="error-email"
+                  />
+                  <span class="form-error" id="error-email" aria-live="polite"></span>
+                </div>
+
+                <div class="form-field">
+                  <label for="contact-message" class="form-label">Votre message</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="5"
+                    class="form-input form-textarea"
+                    placeholder="Parlez-moi de votre projet, d'une opportunité ou d'une collaboration..."
+                    required
+                    aria-describedby="error-message"
+                  ></textarea>
+                  <span class="form-error" id="error-message" aria-live="polite"></span>
+                </div>
+
+                <div class="form-submit-row">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    <span>Envoyer un message</span>
+                    <svg
+                      class="icon-sm"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <line x1="22" y1="2" x2="11" y2="13" />
+                      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div
+                  class="form-feedback"
+                  id="form-feedback"
+                  role="status"
+                  aria-live="polite"
+                  hidden
+                ></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================================================================
+         FOOTER ÉDITORIAL SOBRE
+         =================================================================== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="logo-emblem-shell logo-emblem-sm" aria-hidden="true">
+            <img
+              src="/assets/aistudio/LPro1-1_9cd735f3.png"
+              alt=""
+              class="footer-logo-img"
+              width="24"
+              height="24"
+            />
+          </span>
+          <span class="footer-name">LINGUÈRE TECH SOLUTION</span>
+          <span aria-hidden="true">·</span>
+          <span>UX/UI Design &amp; Web · Dakar, Sénégal</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="#accueil">Accueil</a>
+          <a href="#projets">Projets</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <p class="footer-copy">
+          © <span id="current-year">2026</span> Linguère Tech Solution. Tous droits réservés.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bouton flottant discret de retour en haut -->
+    <button
+      type="button"
+      class="back-to-top"
+      id="back-to-top"
+      aria-label="Revenir en haut de la page"
+      hidden
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <line x1="12" y1="19" x2="12" y2="5" />
+        <polyline points="5 12 12 5 19 12" />
+      </svg>
+    </button>
+
+    <!-- ===================================================================
+         MODALE D'ÉTUDE DE CAS COMPLÈTE (Projets + Emplacements Figma)
+         =================================================================== -->
+    <div
+      class="modal-backdrop"
+      id="project-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-project-title"
+      hidden
+    >
+      <div class="modal-dialog modal-dialog-lg" tabindex="-1">
+        <div class="modal-header">
+          <div class="modal-kicker" id="modal-project-meta"></div>
+          <button
+            type="button"
+            class="modal-close-btn"
+            data-modal-close
+            aria-label="Fermer l'étude de cas"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-scroll-body" id="modal-project-content">
+          <!-- Injecté dynamiquement par script.js -->
+        </div>
+
+        <div class="modal-footer" id="modal-project-footer">
+          <!-- Navigation entre projets injectée dynamiquement -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         MODALE APERÇU CERTIFICAT
+         =================================================================== -->
+    <div
+      class="modal-backdrop"
+      id="cert-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cert-modal-title"
+      hidden
+    >
+      <div class="modal-dialog modal-dialog-md" tabindex="-1">
+        <div class="modal-header">
+          <div class="modal-kicker" id="cert-modal-meta"></div>
+          <button
+            type="button"
+            class="modal-close-btn"
+            data-modal-close
+            aria-label="Fermer l'aperçu du certificat"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-scroll-body" id="cert-modal-content">
+          <!-- Injecté dynamiquement par script.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         MODALE LECTURE & TÉLÉCHARGEMENT DU CV (PDF)
+         =================================================================== -->
+    <div
+      class="modal-backdrop"
+      id="cv-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cv-modal-title"
+      hidden
+    >
+      <div class="modal-dialog modal-dialog-lg" tabindex="-1">
+        <div class="modal-header">
+          <div class="modal-kicker">
+            <span id="cv-modal-title">Curriculum Vitae — Fatou Thiam</span>
+            <span aria-hidden="true">·</span>
+            <span>Format PDF</span>
+          </div>
+          <button
+            type="button"
+            class="modal-close-btn"
+            data-modal-close
+            aria-label="Fermer l'aperçu du CV"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-scroll-body cv-modal-body">
+          <div class="cv-iframe-wrap">
+            <iframe
+              id="cv-pdf-frame"
+              class="cv-iframe"
+              title="Curriculum Vitae de Fatou Thiam au format PDF"
+              src=""
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a
+            href="/assets/aistudio/MON_CV_Fatou_thiam_2_6489fce9.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+          >
+            Ouvrir dans un nouvel onglet
+          </a>
+          <button type="button" class="btn btn-primary" data-cv-trigger>
+            <span>Télécharger le CV (PDF)</span>
+            <svg
+              class="icon-sm"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification accessible -->
+    <div class="toast-region" id="toast-region" role="status" aria-live="polite" hidden></div>
+
+    <!-- Script vanilla JS (defer pour performance optimale sans bloquer le rendu) -->
+    <script src="./script.js" defer></script>
+  </body>
+</html>
